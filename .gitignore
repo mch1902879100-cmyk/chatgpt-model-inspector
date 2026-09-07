@@ -1,0 +1,9 @@
+# Local release packages
+release/
+*.zip
+
+# OS / editor noise
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

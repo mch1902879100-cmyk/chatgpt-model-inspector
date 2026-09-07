@@ -1,0 +1,50 @@
+{
+  "manifest_version": 3,
+  "name": "ChatGPT Model Inspector",
+  "version": "0.1.0",
+  "description": "Detects the model_slug returned by ChatGPT network responses.",
+  "permissions": [
+    "storage"
+  ],
+  "host_permissions": [
+    "https://chatgpt.com/*",
+    "https://chat.openai.com/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "https://chatgpt.com/*",
+        "https://chat.openai.com/*"
+      ],
+      "js": [
+        "src/page-hook.js"
+      ],
+      "run_at": "document_start",
+      "all_frames": false,
+      "world": "MAIN"
+    },
+    {
+      "matches": [
+        "https://chatgpt.com/*",
+        "https://chat.openai.com/*"
+      ],
+      "js": [
+        "src/content.js"
+      ],
+      "run_at": "document_start",
+      "all_frames": false,
+      "world": "ISOLATED"
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "src/panel.css"
+      ],
+      "matches": [
+        "https://chatgpt.com/*",
+        "https://chat.openai.com/*"
+      ]
+    }
+  ]
+}
