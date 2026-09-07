@@ -165,6 +165,9 @@ chatgpt-model-inspector/
 ├─ assets/
 │  ├─ model-inspector.png
 │  └─ workflow-example.svg
+├─ docs/
+│  ├─ VIBE_RELEASE_EXAMPLE.md
+│  └─ VIBE_RELEASE_RULES.md
 ├─ manifest.json
 ├─ README.md
 ├─ README_EN.md
